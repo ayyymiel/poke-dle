@@ -12,5 +12,6 @@ function sendGuess() {
         alert('Congratulations!');
         guessesCounter = 0;
         document.getElementsByClassName("imagebox1")[0].style.backgroundColor = "green";
+        console.log()
     }
 }
