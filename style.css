@@ -34,7 +34,6 @@
 
 .question {
     text-align: center;
-
     font-family: 'Pokemon Solid';
     font-style: normal;
     font-weight: 400;
@@ -59,7 +58,6 @@
     background: transparent;
     display: flex;
     margin: auto;
-    background-color: white;
 }
 
 .imagebox2 { 
