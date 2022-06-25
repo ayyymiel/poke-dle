@@ -3,7 +3,7 @@ let pkmn = 'Darkrai';
 let guessesCounter = 0;
 
 function imageSize() {
-    
+    // dynamic sizing here
 }
 
 function sendGuess() {
