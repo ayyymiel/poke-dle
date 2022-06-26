@@ -6,7 +6,16 @@ function imageSize() {
     // dynamic sizing here
 }
 
+function thePokemon() {
+    // daily pokemon
+}
+
 function sendGuess() {
+    /*
+    This function handles the guesses being sent by the user/player.
+
+    Returns: none
+    */
     let guess = document.getElementById("inputGuess").value;
     if (guess != pkmn) {
         alert('Incorrect!');
