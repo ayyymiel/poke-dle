@@ -1,5 +1,5 @@
-console.log('hello world!');
-let pkmn = 'Darkrai';
+import fetch from "node-fetch";
+
 let guessesCounter = 0;
 
 function imageSize() {
@@ -7,7 +7,14 @@ function imageSize() {
 }
 
 function thePokemon() {
-    // daily pokemon
+    /*
+    This function is used to get the random Pokemon via RESTapi (PokeAPI).
+
+    Returns: string
+    */
+    fetch('https://pokeapi.co/api/v2/pokemon/')
+    .then(response => response.text())
+    .then(data => {return data});
 }
 
 function sendGuess() {
