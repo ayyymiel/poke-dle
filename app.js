@@ -1,6 +1,14 @@
-import fetch from "node-fetch";
+//import fetch from "node-fetch";
 
 let guessesCounter = 0;
+const sizeFactor = 10;
+let pkmn = "Darkrai";
+const boxElement = document.getElementsByClassName("box-image img");
+console.log(boxElement);
+boxElement[0].setAttribute('width', '100%')
+
+// boxElement[0].style.width ='100%';
+
 
 function imageSize() {
     // dynamic sizing here
@@ -29,6 +37,7 @@ function sendGuess() {
         guessesCounter++;
         document.getElementsByClassName("imagebox"+guessesCounter)[0].style.backgroundColor = "red"; //array DOM element of class
         console.log(guessesCounter);
+        // document.getElementsByClassName("box-image img")[0].style.width += sizeFactor;
     } else {
         alert('Congratulations!');
         guessesCounter++;
