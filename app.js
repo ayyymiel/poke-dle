@@ -1,17 +1,22 @@
 //import fetch from "node-fetch";
 
 let guessesCounter = 0;
-const sizeFactor = 10;
 let pkmn = "Darkrai";
-const boxElement = document.getElementsByClassName("box-image img");
-console.log(boxElement);
-boxElement[0].setAttribute('width', '100%')
+const sizeFactor = 20;
 
-// boxElement[0].style.width ='100%';
+document.querySelector('.box-image img').style.width = "40%";
 
+function imageSize(guessCount) {
+    /*
+    This function is used to change the size of the image for every wrong guess.
 
-function imageSize() {
-    // dynamic sizing here
+    Returns: none
+    */
+    let sizeTotal = sizeFactor*guessCount + 40;
+    String(sizeTotal);
+    let totalAsString = sizeTotal + '%';
+    document.querySelector('.box-image img').style.width = `${totalAsString}`;
+    console.log(sizeTotal)
 }
 
 function thePokemon() {
@@ -36,12 +41,10 @@ function sendGuess() {
         alert('Incorrect!');
         guessesCounter++;
         document.getElementsByClassName("imagebox"+guessesCounter)[0].style.backgroundColor = "red"; //array DOM element of class
-        console.log(guessesCounter);
-        // document.getElementsByClassName("box-image img")[0].style.width += sizeFactor;
+        imageSize(guessesCounter);
     } else {
         alert('Congratulations!');
         guessesCounter++;
         document.getElementsByClassName("imagebox"+guessesCounter)[0].style.backgroundColor = "green";
-        console.log(guessesCounter);
     }
 }
